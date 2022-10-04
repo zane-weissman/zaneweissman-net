@@ -3,10 +3,112 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Zane Weissman</title>
-  </head>
+    <style type="text/css">
+/* variables */
+:root{
+  --dark: #050020;
+  --light: #FAE8EB;
+  --pink: #D39CA2;
+  --green: #87BAAB;
+  --yellow: #FFE299;
+        
+        
+  --border-prop: none;
+        font-family: Arial, Helvetica, sans-serif;
+}
+
+      
+#main{
+  width: calc(100% - 160px);
+  float:right;
+}
+
+#tswcsstabs ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: outside none none;
+  display: inline;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #AA7491;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 0px;
+}
+
+#tswcsstabs ul li {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 0px;
+  display: block;
+  text-align: right;
+  width: 100%;
+  list-style: none;
+  float: right;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#tswcsstabs li a {
+  color: var(--light);
+  /*background-color: var(--light);*/ 
+  border: var(--border-prop) var(--pink);
+  padding: 8px;
+  margin: 0px;
+  text-decoration: none;
+  width: 100%;
+  /*display: inline;*/
+}
+
+#tswcsstabs li a:hover {
+  color: var(--light);
+  background-color: var(--green) !important;
+  border: var(--border-prop) var(--light);
+}
+      
+#title-text {
+  font-weight: bold;
+  font-size: xx-large;
+  color: var(--light);
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+a {
+}
+
+</style></head>
   <body>
-    <p><br>
-    </p>
-    <p>Hello world!</p>
+    <div id="tswcsstabs">
+      <ul>
+        <li><a href="index.html#about">About Me</a></li>
+        <br>
+        <li><a href="index.html#pub">Publications</a></li>
+        <br>
+        <li><a href="index.html#talks">Talks</a></li>
+        <br>
+        <li><a href="index.html#vuln">Vulnerabilities</a></li>
+      </ul>
+    </div>
+    <div id="main">
+      <p style="text-align: center;" id="title-text">Zane Weissman </p>
+      <p style="text-align: left;"><img src="images/bio-2-2.jpg" alt="A headshot of Zane Weissman."
+          style="width: 30%; height: auto; float: right; margin: 5px">I am a
+        Ph.D. researcher at Worcester Polytechnic Institute
+        researching microarchitectural security threats to modern cloud systems.
+        I have published two papers presenting new threats posed by FPGAs in the
+        cloud, and I have a strong background in embedded systems. I am
+        currently looking for positions in cybersecurity, computer architecture,
+        FPGA implementation, or embedded systems design. <br>
+      </p>
+      <p style="text-align: center;"></p>
+    </div>
+    <p></p>
   </body>
 </html>
