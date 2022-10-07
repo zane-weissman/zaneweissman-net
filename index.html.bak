@@ -3,40 +3,51 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Zane Weissman</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <style type="text/css">
-/* variables */
-:root{
+:root {
   --dark: #050020;
   --light: #FAE8EB;
   --pink: #D39CA2;
   --green: #87BAAB;
   --yellow: #FFE299;
-        
-        
   --border-prop: none;
-        font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:large;
 }
 
-      
-#main{
-  width: calc(100% - 160px);
-  float:right;
+#main {
+  width: calc(100% - 160px - 16px);
+  float: right;
+}
+
+#main a {
+  color: var(--green);
+}
+
+hr#section {
+  color: var(--pink);
 }
 
 #tswcsstabs ul {
   margin: 0px;
-  padding: 0px;
+  padding: 8px;
   list-style: outside none none;
-  display: inline;
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 160px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #AA7491;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 0px;
+  display: inline-block;
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  background-color: #aa7491;
+  overflow-x: hidden;
 }
 
 #tswcsstabs ul li {
@@ -46,33 +57,47 @@
   display: block;
   text-align: right;
   width: 100%;
-  list-style: none;
+  list-style: outside none none;
   float: right;
-  font-size: large;
+  font-size: larger;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 #tswcsstabs li a {
   color: var(--light);
-  /*background-color: var(--light);*/ 
   border: var(--border-prop) var(--pink);
-  padding: 8px;
-  margin: 0px;
+  padding: 0px;
+  margin: px;
   text-decoration: none;
   width: 100%;
-  /*display: inline;*/
 }
 
-#tswcsstabs li a:hover {
+#tswcsstabs li:hover {
   color: var(--light);
   background-color: var(--green) !important;
   border: var(--border-prop) var(--light);
 }
-      
-#title-text {
+
+#about {
   font-weight: bold;
   font-size: xx-large;
   color: var(--light);
+}
+
+#social {
+  float: right;
+  top: 0px;
+  display: inline-block;
+  background: var(--green);
+  color: var(--dark);
+  padding-left: 2pt;
+  padding-right: 2pt;
+}
+
+#social a {
+  text-decoration: none;
+  font-size: medium;
+  color:inherit;
 }
 
 body {
@@ -83,32 +108,84 @@ body {
 a {
 }
 
+iframe {
+  height: 100%;
+  width: 50%;
+}
+
 </style></head>
   <body>
     <div id="tswcsstabs">
       <ul>
-        <li><a href="index.html#about">About Me</a></li>
-        <br>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#interests">Research Interests</a></li>
         <li><a href="index.html#pub">Publications</a></li>
-        <br>
         <li><a href="index.html#talks">Talks</a></li>
-        <br>
-        <li><a href="index.html#vuln">Vulnerabilities</a></li>
       </ul>
     </div>
-    <div id="main">
-      <p style="text-align: center;" id="title-text">Zane Weissman </p>
+    <div id="main"> <span id="about">Zane Weissman </span> <span id="social">
+        <a href="https://www.linkedin.com/in/zane-weissman-b99744219/">LinkedIn</a>
+        - <a href="github.com/zane-weissman">GitHub</a> - <a href="https://scholar.google.com/citations?user=-P7qRPoAAAAJ">Scholar</a>
+        - <a href="mailto:zweissman@wpi.edu">Email</a> </span>
       <p style="text-align: left;"><img src="images/bio-2-2.jpg" alt="A headshot of Zane Weissman."
-          style="width: 30%; height: auto; float: right; margin: 5px">I am a
-        Ph.D. researcher at Worcester Polytechnic Institute
-        researching microarchitectural security threats to modern cloud systems.
-        I have published two papers presenting new threats posed by FPGAs in the
-        cloud, and I have a strong background in embedded systems. I am
+          style="width: 30%; max-width:300px; height: auto; float: right; margin: 5px">I
+        am a Ph.D. researcher at <a href="https://www.wpi.edu">Worcester
+          Polytechnic Institute</a> (WPI) researching microarchitectural
+        security threats to modern cloud systems under the supervision of <a href="https://users.wpi.edu/%7Esunar/">Berk
+          Sunar</a> (WPI) and <a href="https://www.its.uni-luebeck.de/en/staff/thomas-eisenbarth/">Thomas
+          Eisenbarth</a> (<a href="https://www.uni-luebeck.de/en/university/university.html">University
+          of Lübeck</a>). I have published two papers presenting new threats
+        posed by FPGAs in the cloud. Currently, I am working on a security
+        analysis and threat survey of AWS's new <a href="https://firecracker-microvm.github.io/">Firecracker
+          MicroVM</a>. In 2019, I completed my BS and MS in electrical and
+        computer engineering at WPI, where my particular interests included
+        embedded systems programming and computer architecture and design. I am
         currently looking for positions in cybersecurity, computer architecture,
         FPGA implementation, or embedded systems design. <br>
       </p>
-      <p style="text-align: center;"></p>
+      <h2 id="interests">Research Interests
+        <hr></h2>
+      <ul>
+        <li>Side-channel attacks</li>
+        <li>Speculative execution attacks</li>
+        <li>FPGAs and FPGA-CPU coprocessing platforms</li>
+        <li>Virtual machine and cloud system security</li>
+        <li>Hardware and firmware defenses against microarchitectural
+          vulnerabilities</li>
+      </ul>
+      <h2 id="pub"> Publications
+        <hr> </h2>
+      <ul>
+        <li> <a href="https://arxiv.org/abs/2202.11623"> </a>T. Tiemann, Z.
+          Weissman, T. Eisenbarth, and B. Sunar, <b>IOTLB-SC: An
+            Accelerator-Independent Leakage Source in Modern Cloud Systems</b>,&nbsp;
+          2022, under review. <a href="https://arxiv.org/abs/2202.11623">[arXiv]</a>
+          <a href="https://arxiv.org/pdf/2202.11623">[PDF]</a> <a href="citations/1912.11523.bib">[BibTeX]</a>
+        </li>
+        <br>
+        <li> Z. Weissman, T. Tiemann, D. Moghimi, E. Custodio, T. Eisenbarth,
+          and B. Sunar, <b>JackHammer: Efficient Rowhammer on Heterogeneous
+            FPGA-CPU Platforms</b>, IACR Transactions in Cryptographic Hardware
+          and Embedded Systems, Volume 2020, Issue 3. <a href="https://arxiv.org/abs/1912.11523">[arXiv]</a>
+          <a href="https://arxiv.org/abs/1912.11523">[PDF]</a> <a href="docs/jackhammer_poster.pdf">[poster]</a>
+          <a href="citations/2202.11623.bib">[BibTeX]</a> <a href="https://www.zdnet.com/article/fpga-cards-can-be-abused-for-faster-and-more-reliable-rowhammer-attacks/">[ZDNET]</a>
+          <a href="https://www.tomshardware.com/news/jackhammer-attack-security-fpga-cpu-rowhammer">[Tom's
+            Hardware]</a> </li>
+      </ul>
+      <h2 id="talks"> Talks
+        <hr> </h2>
+      <ul>
+        <li> JackHammer: Rowhammer and Cache Attacks on Heterogeneous FPGA-CPU
+          Platforms @ Hardwear.io 2020 <a href="https://www.youtube.com/watch?v=BpocgiNuJKY">[video]</a>
+          <a href="docs/hardweario2020-jackhammer.pdf">[slides]</a> </li>
+        <br>
+        <li> Jackhammer: Efficient Rowhammer on Heterogeneous FPGA-CPU Platforms
+          @ Intel SCAP 2020 </li>
+        <br>
+        <li> Jackhammer: Efficient Rowhammer on Heterogeneous FPGA-CPU Platforms
+          @ CHES 2020 <a href="https://www.youtube.com/watch?v=cBe3YTtrM5s">[video]</a>
+          <a href="docs/ches2020-jackhammer.pdf">[slides]</a> </li>
+      </ul>
     </div>
-    <p></p>
   </body>
 </html>
